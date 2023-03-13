@@ -10,7 +10,7 @@ import {
   selectError,
 } from 'redux/contacts/contacts-selectors';
 import { fetchContacts } from 'redux/contacts/contacts-operations';
-import { RotatingLines } from 'react-loader-spinner';
+import { Blocks } from 'react-loader-spinner';
 
 const ContactPage = () => {
   const contacts = useSelector(selectContacts);
@@ -34,12 +34,13 @@ const ContactPage = () => {
             <h2 className={styles.title}>Contacts</h2>
             {isLoading && (
               <div className={styles.spiner}>
-                <RotatingLines
-                  strokeColor="black"
-                  strokeWidth="5"
-                  animationDuration="0.75"
-                  width="96"
+                <Blocks
                   visible={true}
+                  height="80"
+                  width="80"
+                  ariaLabel="blocks-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="blocks-wrapper"
                 />
               </div>
             )}

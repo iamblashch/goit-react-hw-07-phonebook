@@ -13,3 +13,17 @@
 .title {
   text-align: center;
 }
+.spiner_box {
+  position: relative;
+}
+
+.spiner {
+  position: fixed;
+  top: 45%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.error {
+  text-align: center;
+}
