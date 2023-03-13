@@ -9,8 +9,8 @@ const INITIAL_STATE = {
   number: '',
 };
 
-const ContactForm = ({ addContact }) => {
-  const [state, setState] = useState({ ...INITIAL_STATE });
+const ContactForm = () => {
+  const [state, setState] = useState(INITIAL_STATE);
 
   const focusRef = useRef();
   const dispatch = useDispatch();
@@ -33,10 +33,10 @@ const ContactForm = ({ addContact }) => {
   const handleSubmitForm = e => {
     e.preventDefault();
     focusRef.current.focus();
+    
+    onAddContact(state);
 
-    addContact({ ...state });
-
-    onAddContact({ ...INITIAL_STATE });
+    setState(INITIAL_STATE);
   };
 
   return (
