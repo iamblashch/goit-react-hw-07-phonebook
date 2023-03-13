@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  height: 25px;
+  border: none;
+  background-color: red;
+  color: white;
+}
+.name {
+  width: 150px;
+}
+.number {
+  width: 150px;
+}
